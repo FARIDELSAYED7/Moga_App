@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "752218920500",
+    "project_id": "moga-ea9eb",
+    "storage_bucket": "moga-ea9eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:752218920500:android:985b58fff9530f1794dc61",
+        "android_client_info": {
+          "package_name": "com.example.mogab"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASgYelDCuGtZJqnGk5-5sYFqlp55N33dw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
