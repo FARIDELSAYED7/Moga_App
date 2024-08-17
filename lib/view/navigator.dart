@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:mogab/Screens/home_screen_page.dart';
-import 'package:mogab/Screens/moga_chat.dart';
-import 'package:mogab/util/logo_title.dart';
+import 'package:mogab/view/Screens/audio_list_screen.dart';
+import 'package:mogab/view/Screens/home_screen_page.dart';
+import 'package:mogab/view/Screens/mange_breeth.dart';
+import 'package:mogab/view/Screens/moga_chat.dart';
+import 'package:mogab/view/util/logo_title.dart';
 
 class BottomNavBarPage extends StatefulWidget {
-
-
   const BottomNavBarPage({
-    super.key, 
+    super.key,
+    this.selectedIndex = 0,
+    this.navigateToMeditate,
   });
+  final int selectedIndex;
+  final void Function()? navigateToMeditate;
   @override
   State<BottomNavBarPage> createState() => _BottomNavBarPageState();
 }
@@ -22,11 +26,22 @@ class _BottomNavBarPageState extends State<BottomNavBarPage> {
   }
 
   List<Widget> get _screens => [
-        const HomeScreenPage(),
+        HomeScreenPage(),
         const MogaChat(),
+        MusicListScreen(),
+        BreathScreen(),
         const Center(child: Text("Account")),
         const Center(child: Text("Profile")),
       ];
+
+  @override
+  void initState() {
+    super.initState();
+    _selectedIndex = widget.selectedIndex;
+    if (widget.navigateToMeditate != null) {
+      widget.navigateToMeditate!();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,6 +64,8 @@ class _BottomNavBarPageState extends State<BottomNavBarPage> {
           BottomNavigationBarItem(icon: Icon(Icons.assistant), label: "Chat"),
           BottomNavigationBarItem(
               icon: Icon(Icons.medication), label: "Meditate"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.health_and_safety_sharp), label: "breath"),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Account"),
         ],
         currentIndex: _selectedIndex,

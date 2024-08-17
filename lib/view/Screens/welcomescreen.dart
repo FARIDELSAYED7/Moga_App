@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mogab/Screens/home_screen_page.dart';
-import 'package:mogab/Screens/moga_chat.dart';
-import 'package:mogab/navigator.dart';
-import 'package:mogab/widgets/Elveated_buttons.dart';
-import 'package:mogab/widgets/background_photo.dart';
+import 'package:mogab/view/Screens/home_screen_page.dart';
+import 'package:mogab/view/Screens/moga_chat.dart';
+import 'package:mogab/view/navigator.dart';
+import 'package:mogab/view/widgets/Elveated_buttons.dart';
+import 'package:mogab/view/widgets/background_photo.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});

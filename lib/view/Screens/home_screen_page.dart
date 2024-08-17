@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mogab/navigator.dart';
-import 'package:mogab/widgets/Recomended_Container.dart';
+import 'package:mogab/view/Screens/audio_list_screen.dart';
+import 'package:mogab/view/Screens/moga_chat.dart';
+import 'package:mogab/view/navigator.dart';
+import 'package:mogab/view/widgets/Recomended_Container.dart';
 
 class HomeScreenPage extends StatefulWidget {
   const HomeScreenPage({super.key});
@@ -112,10 +114,13 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
                                       vertical: 8, horizontal: 16),
                                 ),
                                 onPressed: () {
-                                  Navigator.push(context,
-                                      MaterialPageRoute(builder: (context) {
-                                    return const BottomNavBarPage();
-                                  }));
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const BottomNavBarPage(
+                                                selectedIndex: 1,
+                                              )));
                                 },
                                 child: const Text(
                                   "Chat With Ai",
@@ -156,7 +161,7 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
                               ),
                             ),
                             Text(
-                              "Meditation 7 : 10 MIN ",
+                              "Brething is key for good health",
                               style: TextStyle(
                                 color: Colors.grey,
                                 fontSize: 14,
@@ -167,7 +172,14 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
                         ),
                         const Spacer(),
                         IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return BottomNavBarPage(
+                                  selectedIndex: 3,
+                                );
+                              }));
+                            },
                             icon: Icon(
                               Icons.play_circle,
                               color: Colors.white,
@@ -191,26 +203,26 @@ class _HomeScreenPageState extends State<HomeScreenPage> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      RecomendedContainer(
-                        imgUrl: 'assets/images/Focus.png',
-                        title: "Foucs",
-                        subTitle: "Meditation 3 : 10 MIN",
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      RecomendedContainer(
-                        imgUrl: "assets/images/whitenoise.png",
-                        title: "White Noise",
-                        subTitle: "Meditation 3 : 10 MIN",
-                      ),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      RecomendedContainer(
-                        imgUrl: "assets/images/whitenoise.png",
-                        title: "White Noise",
-                        subTitle: "Meditation 3 : 10 MIN",
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return BottomNavBarPage(
+                              selectedIndex: 2,
+                            );
+                          }));
+                        },
+                        child: RecomendedContainer(
+                          onTap: () => Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return BottomNavBarPage(
+                              selectedIndex: 2,
+                            );
+                          })),
+                          imgUrl: 'assets/images/Focus.png',
+                          title: "Foucs",
+                          subTitle: "Meditation 3 : 7 MIN",
+                        ),
                       ),
                     ],
                   ),

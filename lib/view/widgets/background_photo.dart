@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mogab/util/logo_title.dart';
-import 'package:mogab/widgets/Elveated_buttons.dart';
+import 'package:mogab/view/util/logo_title.dart';
+import 'package:mogab/view/widgets/Elveated_buttons.dart';
 
 class BackgroundPhoto extends StatelessWidget {
   const BackgroundPhoto({super.key, required this.path});
@@ -17,7 +17,7 @@ class BackgroundPhoto extends StatelessWidget {
             path,
             fit: BoxFit.cover,
           ),
-        ),      ],
+        ),  ],
     );
   }
 }

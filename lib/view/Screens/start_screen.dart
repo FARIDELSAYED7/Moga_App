@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:mogab/Screens/welcomescreen.dart';
-import 'package:mogab/util/Background_image.dart';
-import 'package:mogab/util/logo_title.dart';
+import 'package:mogab/view/Screens/welcomescreen.dart';
+import 'package:mogab/view/util/Background_image.dart';
+import 'package:mogab/view/util/logo_title.dart';
 
 class StatrtScreen extends StatelessWidget {
   const StatrtScreen({super.key});
@@ -10,7 +10,6 @@ class StatrtScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IntroductionScreen(
-
       globalBackgroundColor: Colors.white,
       globalHeader: Align(
         alignment: Alignment.topCenter,
@@ -32,10 +31,10 @@ class StatrtScreen extends StatelessWidget {
           title: "Hi, Welcome to MOGA",
           body:
               "This is your place to get rid of stress and anxiety through different ways of relaxing.",
-          image: BackgroundImage(url: 'assets/images/intros4.png'),
+          image: BackgroundImage(url: 'assets/images/intro.png'),
           decoration: const PageDecoration(
             fullScreen: true,
-            contentMargin: EdgeInsets.only(top: 120, bottom: 80),
+            contentMargin: EdgeInsets.only(top: 120, bottom: 10),
             bodyAlignment: Alignment.bottomCenter,
             titleTextStyle: TextStyle(
               fontSize: 30,
@@ -53,10 +52,10 @@ class StatrtScreen extends StatelessWidget {
           title: "Our Main Goal is Solving “Stress”",
           body:
               "Stress is like any other illness that needs to be addressed and treated; it is not a defect or a personal flaw.",
-          image: BackgroundImage(url: 'assets/images/intros2.png'),
+          image: BackgroundImage(url: 'assets/images/stress.png'),
           decoration: const PageDecoration(
-            fullScreen: true,
-            contentMargin: EdgeInsets.only(top: 100, bottom: 70),
+            fullScreen: false,
+            contentMargin: EdgeInsets.only(top: 00, bottom: 0),
             bodyAlignment: Alignment.bottomCenter,
             titleTextStyle: TextStyle(
               fontSize: 30,
@@ -75,10 +74,10 @@ class StatrtScreen extends StatelessWidget {
           title: "We Provide a Whole Relaxation Environment",
           body:
               "Here at MOGA, we provide Relaxation Sounds, Relaxing Games, Meditation Animations, and Professional Healthcare Specialists.",
-          image: BackgroundImage(url: 'assets/images/intros3.png'),
+          image: BackgroundImage(url: 'assets/images/happy.png'),
           decoration: const PageDecoration(
-            fullScreen: true,
-            contentMargin: EdgeInsets.only(top: 100, bottom: 70),
+            fullScreen: false,
+            contentMargin: EdgeInsets.only(top: 100, bottom: 0),
             bodyAlignment: Alignment.bottomCenter,
             titleTextStyle: TextStyle(
               fontSize: 30,
@@ -102,7 +101,7 @@ class StatrtScreen extends StatelessWidget {
             contentMargin: EdgeInsets.only(top: 100, bottom: 70),
             bodyAlignment: Alignment.bottomCenter,
             titleTextStyle: TextStyle(
-                fontSize: 30, fontWeight: FontWeight.w600, color: Colors.black),
+                fontSize: 30, fontWeight: FontWeight.w600, color: Colors.white),
             bodyTextStyle: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 18,

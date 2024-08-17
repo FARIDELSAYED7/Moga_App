@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
-import 'package:mogab/Gemini/consts.dart';
-import 'package:mogab/Screens/start_screen.dart';
+import 'package:mogab/Core/Gemini/consts.dart';
+import 'package:mogab/view/Screens/start_screen.dart';
 
 void main() async {
   Gemini.init(apiKey: GEMINI_API_KEY);
@@ -16,9 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: StatrtScreen(
-
-      ),
+      home: StatrtScreen(),
     );
   }
 }

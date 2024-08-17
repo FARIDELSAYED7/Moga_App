@@ -23,33 +23,20 @@ class _HomePageState extends State<MogaChat> {
     id: "1",
     firstName: "Moga Ai",
     profileImage:
-    
         "https://i.ibb.co/fCD2643/41fa79ef-dd45-432b-b816-8e7e24dd433f.jpg",
   );
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: Colors.white,
-        centerTitle: true,
-        title: const Text(
-          "Moga Ai Chat",
-        ),
-      ),
-      body: _buildUI(),
+     body: _buildUI(),
     );
   }
 
   Widget _buildUI() {
     return DashChat(
-      messageOptions: MessageOptions(
-      currentUserContainerColor: Colors.black
-      ),
-      inputOptions: InputOptions(
-        alwaysShowSend: true,
-        trailing: [
+      messageOptions: MessageOptions(currentUserContainerColor: Colors.black),
+      inputOptions: InputOptions(alwaysShowSend: true, trailing: [
         IconButton(
           onPressed: _sendMediaMessage,
           icon: const Icon(
